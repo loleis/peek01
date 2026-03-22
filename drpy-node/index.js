@@ -16,6 +16,8 @@ import {daemon} from "./utils/daemonManager.js";
 // 注册控制器
 import {registerRoutes, registerWsRoutes} from './controllers/index.js';
 
+// 重置 Fastify 实例，确保每次启动都是一个全新的实例
+fastlogger.resetFastify();
 const {fastify, wsApp} = fastlogger;
 
 // 获取当前路径
@@ -76,7 +78,7 @@ fastify.addHook('onClose', async () => {
 
 // 给静态目录插件中心挂载basic验证
 fastify.addHook('preHandler', (req, reply, done) => {
-    if (req.raw.url.startsWith('/apps/')) {
+    if (req.raw.url.startsWith('/apps/') || req.raw.url.startsWith('/api/admin/')) {
         if (req.raw.url.includes('clipboard-pusher/index.html')) {
             validateBasicAuth(req, reply, async () => {
                 validatHtml(req, reply, rootDir).then(() => done());
@@ -276,10 +278,14 @@ const stop = async () => {
         await stopWebSocketServer();
         // 停止主服务器
         await fastify.server.close();
+        // 清理 Fastify 实例，确保下次启动时使用新实例
+        fastlogger.resetFastify();
         console.log('🛑 所有服务已优雅停止');
         return true;
     } catch (err) {
         fastify.log.error(`停止服务器时发生错误:${err.message}`);
+        // 即使发生错误，也要清理 Fastify 实例
+        fastlogger.resetFastify();
         return false;
     }
 };
