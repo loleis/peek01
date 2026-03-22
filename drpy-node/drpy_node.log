@@ -1,0 +1,38 @@
+[2026-02-05T09:53:17.030Z] [drpy-start] 启动脚本开始
+[2026-02-05T09:53:17.030Z] [drpy-start] Node.js: v18.20.4
+[2026-02-05T09:53:17.031Z] [drpy-start] 平台: android arm64
+[2026-02-05T09:53:17.032Z] [drpy-start] PHP 环境变量已设置
+[2026-02-05T09:53:17.033Z] [drpy-start] PHP_PATH: /data/user/0/com.example.peekpili/files/php/php
+[2026-02-05T09:53:17.033Z] [drpy-start] LD_LIBRARY_PATH: /data/user/0/com.example.peekpili/files/php/libs:/system/lib64:/system/lib
+[2026-02-05T09:53:17.101Z] [drpy-start] PHP 版本测试成功: PHP 8.5.1 (cli) (built: Dec 22 2025 00:03:00) (NTS)
+[2026-02-05T09:53:17.105Z] [polyfill] 添加 File
+[2026-02-05T09:53:17.199Z] [polyfill] Web API polyfills 已添加
+[2026-02-05T09:53:17.208Z] [polyfill] abba (atob/btoa) 已执行
+[2026-02-05T09:53:17.231Z] [polyfill] CryptoJS 已加载: object
+[2026-02-05T09:53:17.240Z] [polyfill] pako 已加载: object
+[2026-02-05T09:53:17.259Z] [polyfill] JSEncrypt 已加载: function
+[2026-02-05T09:53:17.264Z] [polyfill] jinja 已加载: object
+[2026-02-05T09:53:17.272Z] [polyfill] JSON5 已加载: object
+[2026-02-05T09:53:17.323Z] [polyfill] NODERSA 已加载: object
+[2026-02-05T09:53:17.477Z] [polyfill] gbkTool 已加载: object
+[2026-02-05T09:53:17.491Z] [polyfill] marked 已加载: function
+[2026-02-05T09:53:17.497Z] [polyfill] randomUa 已执行
+[2026-02-05T09:53:17.498Z] [polyfill] 全局库加载完成
+[2026-02-05T09:53:17.499Z] [drpy-start] 工作目录: /storage/emulated/0/peekpili/drpy-node
+[2026-02-05T09:53:17.499Z] [polyfill] 强制使用 axios 请求库 (DS_REQ_LIB=1)
+[2026-02-05T09:53:17.500Z] [drpy-start] index.js: /storage/emulated/0/peekpili/drpy-node/index.js
+[2026-02-05T09:53:17.501Z] [drpy-start] 存在: true
+[2026-02-05T09:53:17.502Z] [drpy-start] node_modules: true
+[2026-02-05T09:53:17.503Z] [drpy-start] 加载: file:///storage/emulated/0/peekpili/drpy-node/index.js
+[2026-02-05T09:53:22.835Z] [drpy-start] 加载成功: default,start,stop
+[2026-02-05T09:53:23.222Z] [drpy-start] HTTP 端口已写入: 5757
+[2026-02-05T09:53:23.223Z] [drpy-start] 服务器启动，端口: 5757
+[2026-02-05T09:53:23.229Z] [drpy-start] 跳过 WebSocket 端口: 57575
+[2026-02-05T09:53:23.230Z] [drpy-start] 服务器启动，端口: 57575
+[2026-02-05T09:53:25.838Z] [network-test] 开始网络测试...
+[2026-02-05T09:53:25.839Z] [network-test] 测试 HTTPS: https://httpbin.org/get
+[2026-02-05T09:53:27.462Z] [network-test] HTTPS 成功: status=200, length=199
+[2026-02-05T09:53:27.464Z] [network-test] 测试番茄小说 API: https://fanqienovel.com/api/author/book/category_list/v0/
+[2026-02-05T09:53:27.901Z] [network-test] 番茄小说 API 状态: 200, 长度: 43846
+[2026-02-05T09:53:27.905Z] [network-test] 响应预览: {"code":0,"data":[{"category_id":747,"label":"主分类","name":"女频悬疑","cover_uri":"http://p3-novel.byteim
+[2026-02-05T09:53:27.907Z] [network-test] 网络测试完成
